@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+*.egg-info/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Office tạm
+~$*
+*.tmp
+
+# Gói nộp (giữ thư mục, bỏ file zip sinh ra)
+submission/*.zip
