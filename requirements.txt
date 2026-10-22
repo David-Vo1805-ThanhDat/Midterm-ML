@@ -1,0 +1,4 @@
+numpy>=1.26
+matplotlib>=3.8
+scikit-learn>=1.4   # chỉ dùng để đối chiếu/kiểm chứng, không dùng làm phần cài đặt EM chính
+pytest>=8.0
