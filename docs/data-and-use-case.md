@@ -61,7 +61,7 @@ Iris **không chọn** vì 4 chiều khó giải thích trong thời gian còn l
 | Giá trị thiếu | Không có | Không có (đã kiểm tra trong `tests/test_data.py`) |
 | Chuẩn hóa | Không (đã cùng thang đo) | **z-score từng cột** (`standardize()`) |
 
-**Vì sao chuẩn hóa Old Faithful?** `waiting` có thang đo gấp khoảng 20 lần `eruptions`. Về lý thuyết, log-likelihood của GMM với covariance đầy đủ không đổi khi đổi thang đo tuyến tính. Tuy vậy, chuẩn hóa vẫn giúp (1) bước khởi tạo dùng khoảng cách Euclid không bị cột `waiting` lấn át, (2) ma trận covariance có điều kiện số tốt hơn. Khi vẽ hình và báo cáo kết quả, nhóm đổi ngược về phút bằng `mean` và `std` trả về.
+**Vì sao chuẩn hóa Old Faithful?** Độ lệch chuẩn của `waiting` (13.57 phút) gấp khoảng 12 lần của `eruptions` (1.14 phút). Về lý thuyết, với covariance đầy đủ, đổi thang đo tuyến tính chỉ làm log-likelihood lệch một hằng số, nên nghiệm tối ưu tương đương. Tuy vậy, chuẩn hóa vẫn giúp (1) bước khởi tạo dùng khoảng cách Euclid không bị cột `waiting` lấn át, (2) ma trận covariance có điều kiện số tốt hơn. Khi vẽ hình và báo cáo kết quả, nhóm đổi ngược về phút bằng `mean` và `std` trả về.
 
 ## 4. Câu hỏi thực nghiệm
 
