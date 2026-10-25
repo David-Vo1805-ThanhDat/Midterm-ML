@@ -1,6 +1,6 @@
 # Dữ liệu và bài toán ứng dụng (I04)
 
-> Trạng thái: **Chờ nhóm duyệt** · Owner: TV2 · Tham vấn: TV1 · Issue: #4
+> Trạng thái: **Đã duyệt** · Owner: TV2 · Tham vấn: TV1 · Issue: #4
 
 ## 1. Quyết định
 
