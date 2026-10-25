@@ -1,0 +1,2 @@
+# Giữ nguyên byte của file dữ liệu để checksum SHA-256 khớp trên mọi máy
+data/*.csv -text
