@@ -110,7 +110,7 @@ Kết quả mong đợi: Synthetic `(300, 2)` với `[155 88 57]` điểm mỗi 
 
 ## 9. Việc chuyển sang issue sau
 
-- **I06:** lấy 4–6 điểm Old Faithful đã chuẩn hóa để tính tay một vòng E/M.
+- **I06:** issue yêu cầu dữ liệu 1D nhỏ, K = 2, nên có thể lấy 4–6 giá trị của riêng cột `eruptions` (Old Faithful) để tính tay một vòng E/M.
 - **I10:** cố định seed khởi tạo EM và số lần khởi tạo; cập nhật README.
 - **I13:** tính ARI trên dữ liệu tổng hợp; viết phần giới hạn dựa trên mục 7.
 - **I20:** ghi nguồn Härdle (1991), Azzalini & Bowman (1990), Rdatasets.
