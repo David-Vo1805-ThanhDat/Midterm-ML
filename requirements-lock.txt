@@ -1,0 +1,7 @@
+# Phiên bản CHÍNH XÁC đã dùng để tạo kết quả trong results/ (Python 3.12.6, Windows 11).
+# Cài bằng: pip install -r requirements-lock.txt
+# requirements.txt chỉ ghi phiên bản tối thiểu; kết quả đã được kiểm tra giống hệt với bản mới hơn.
+numpy==2.1.2
+matplotlib==3.9.2
+scikit-learn==1.9.1
+pytest==9.0.3
