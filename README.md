@@ -42,6 +42,16 @@ Mọi lệnh bên dưới chạy từ **thư mục gốc của repo**. Code khô
 | Kiểm tra dữ liệu | `python -m src.data` | Synthetic `(300, 2)` với `[155 88 57]` điểm mỗi thành phần; Old Faithful `(272, 2)` |
 | Tải lại Old Faithful (không bắt buộc) | `python -m src.data --download` | Tải từ Rdatasets và kiểm tra SHA-256 |
 | Chạy toàn bộ test | `pytest` | Tất cả test pass |
+| Chạy toàn bộ thực nghiệm | `python -m src.run_experiments` | Khoảng 10 giây; in tóm tắt Q1–Q3 và ghi file vào `results/` |
+
+**Kết quả thực nghiệm** (`results/`, tạo lại được bằng lệnh trên):
+
+| File | Nội dung |
+|---|---|
+| `experiment-results.json` | Cấu hình, phiên bản thư viện, tham số cuối, log-likelihood theo vòng lặp, BIC, sai số so với tham số thật, cảnh báo và lỗi của từng lần chạy |
+| `bic.csv` | BIC theo K cho cả hai bộ dữ liệu |
+| `init-study.csv` | Log-likelihood cuối của 20 seed khởi tạo (câu hỏi Q2) |
+| `synthetic-labels.csv`, `faithful-labels.csv` | Từng điểm dữ liệu kèm nhãn dự đoán và responsibility |
 
 ## 4. Dữ liệu
 
