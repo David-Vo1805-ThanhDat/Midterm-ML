@@ -35,7 +35,14 @@ Có hai file requirements:
 | `requirements.txt` | Cài bình thường; ghi phiên bản **tối thiểu** |
 | `requirements-lock.txt` | Muốn dùng **đúng** phiên bản đã tạo `results/` |
 
-Kết quả đã được kiểm tra là **giống hệt** khi cài bản mới hơn (numpy 2.5.4, matplotlib 3.11.2). Phiên bản thực tế của mỗi lần chạy được lưu tự động trong `results/experiment-results.json` (trường `environment`).
+Mức độ giống nhau khi chạy lại (đã kiểm tra trên thư mục sạch):
+
+| Cài bằng | Kết quả so với `results/` đã commit |
+|---|---|
+| `requirements-lock.txt` | Mọi số liệu giống hệt từng chữ số |
+| `requirements.txt` với bản mới hơn (numpy 2.5.4, matplotlib 3.11.2) | Mọi kết luận và số hiển thị giống nhau; chỉ lệch ở chữ số thập phân thứ 12–13 do sai số làm tròn của máy; hình có thể lệch vài pixel |
+
+Phiên bản thực tế của mỗi lần chạy được lưu tự động trong `results/experiment-results.json` (trường `environment`).
 
 ## 2. Cài đặt
 
@@ -86,7 +93,7 @@ Saved to <thư mục repo>/results
 
 ### Kết quả thực nghiệm (`results/`)
 
-Các file kết quả đã được commit sẵn. Chạy lại sẽ ghi đè bằng nội dung giống hệt, chỉ khác thời điểm chạy (`generated_at`) và thông tin môi trường (`environment`). Để tự kiểm tra: chạy lại rồi dùng `git diff results/`.
+Các file kết quả đã được commit sẵn. Chạy lại sẽ ghi đè chúng; với `requirements-lock.txt` thì nội dung chỉ khác thời điểm chạy (`generated_at`) và thông tin môi trường (`environment`). Để tự kiểm tra: chạy lại rồi dùng `git diff results/`.
 
 | File | Nội dung |
 |---|---|
@@ -185,6 +192,7 @@ score = bic(result, X)               # nhỏ hơn là tốt hơn
 | PowerShell báo `running scripts is disabled` khi kích hoạt venv | Chính sách bảo mật mặc định của Windows | Chạy `Set-ExecutionPolicy -Scope Process Bypass` rồi kích hoạt lại (chỉ áp dụng cho cửa sổ hiện tại) |
 | `python` không tìm thấy (Windows) | Python chưa có trong PATH | Dùng `py` thay cho `python`, ví dụ `py -m venv .venv` |
 | `python` không tìm thấy (macOS/Linux) | Hệ thống dùng tên `python3` | Dùng `python3` thay cho `python` |
+| `pip install -r ...` báo `decoding with 'cp1252' codec failed` | File requirements có ký tự không phải ASCII (pip trên Windows đọc theo bảng mã hệ thống) | Hai file requirements của repo chỉ dùng ASCII; nếu tự sửa, đừng thêm chữ có dấu |
 | `ValueError: Checksum ... không khớp` | File `data/faithful.csv` bị đổi ký tự xuống dòng hoặc bị sửa | `git checkout -- data/faithful.csv` (repo có `.gitattributes` giữ nguyên file này) |
 | Cảnh báo về font khi vẽ hình (macOS/Linux) | Máy không có font Arial | Không ảnh hưởng: hình tự dùng font DejaVu Sans |
 
