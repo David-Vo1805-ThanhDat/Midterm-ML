@@ -25,8 +25,10 @@ REG_COVAR = 1e-6           # cộng vào đường chéo covariance
 # Chọn K bằng BIC
 K_RANGE = list(range(1, 7))
 
-# Câu hỏi Q2 (phụ thuộc khởi tạo): chạy riêng từng seed, mỗi seed một lần khởi tạo
+# Câu hỏi Q2 (phụ thuộc khởi tạo): chạy riêng từng seed, mỗi seed một lần khởi tạo.
+# Khảo sát cả K đúng/được BIC chọn và K lớn hơn (nơi local optimum xuất hiện).
 INIT_STUDY_SEEDS = list(range(20))
+INIT_STUDY_K = {"synthetic": [3, 5], "faithful": [2, 4]}
 
 
 def as_dict() -> dict:
@@ -36,4 +38,5 @@ def as_dict() -> dict:
         "synthetic_true_k": SYNTHETIC_TRUE_K, "em_seed": EM_SEED, "n_init": N_INIT,
         "max_iter": MAX_ITER, "tol": TOL, "reg_covar": REG_COVAR,
         "k_range": K_RANGE, "init_study_seeds": INIT_STUDY_SEEDS,
+        "init_study_k": INIT_STUDY_K,
     }

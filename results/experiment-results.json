@@ -1,0 +1,1198 @@
+{
+ "generated_at": "2026-10-27T06:26:14+00:00",
+ "config": {
+  "synthetic_seed": 42,
+  "synthetic_n": 300,
+  "synthetic_true_k": 3,
+  "em_seed": 0,
+  "n_init": 10,
+  "max_iter": 500,
+  "tol": 1e-06,
+  "reg_covar": 1e-06,
+  "k_range": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "init_study_seeds": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19
+  ],
+  "init_study_k": {
+   "synthetic": [
+    3,
+    5
+   ],
+   "faithful": [
+    2,
+    4
+   ]
+  }
+ },
+ "environment": {
+  "python": "3.12.6",
+  "numpy": "2.1.2",
+  "scikit-learn": "1.9.1",
+  "matplotlib": "3.9.2",
+  "platform": "Windows-11-10.0.26200-SP0"
+ },
+ "note": "sklearn chỉ dùng adjusted_rand_score để đánh giá; mọi lần fit dùng src/em_gmm.py",
+ "q1_synthetic": {
+  "data": {
+   "name": "synthetic",
+   "n": 300,
+   "seed": 42,
+   "true_counts": [
+    155,
+    88,
+    57
+   ],
+   "true_params": {
+    "pi": [
+     0.5,
+     0.3,
+     0.2
+    ],
+    "mu": [
+     [
+      0.0,
+      0.0
+     ],
+     [
+      4.0,
+      4.0
+     ],
+     [
+      -3.0,
+      4.0
+     ]
+    ],
+    "Sigma": [
+     [
+      [
+       1.0,
+       0.0
+      ],
+      [
+       0.0,
+       1.0
+      ]
+     ],
+     [
+      [
+       1.5,
+       0.8
+      ],
+      [
+       0.8,
+       1.0
+      ]
+     ],
+     [
+      [
+       0.5,
+       0.0
+      ],
+      [
+       0.0,
+       2.0
+      ]
+     ]
+    ]
+   }
+  },
+  "K": 3,
+  "fit": {
+   "pi": [
+    0.2953405801619068,
+    0.5147740340843348,
+    0.18988538575375852
+   ],
+   "mu": [
+    [
+     4.016712124486098,
+     3.9413478530123336
+    ],
+    [
+     -0.03167785032514313,
+     -0.0011772624992680651
+    ],
+    [
+     -3.0740451119679633,
+     3.924203430784481
+    ]
+   ],
+   "Sigma": [
+    [
+     [
+      1.8617740916226302,
+      0.8609818466890731
+     ],
+     [
+      0.8609818466890731,
+      0.9676908759323481
+     ]
+    ],
+    [
+     [
+      1.0603294667594527,
+      0.17426970580731999
+     ],
+     [
+      0.17426970580731999,
+      1.0094421861847636
+     ]
+    ],
+    [
+     [
+      0.38297158652799035,
+      0.19160623760442053
+     ],
+     [
+      0.19160623760442053,
+      2.185115792077284
+     ]
+    ]
+   ],
+   "log_likelihood": -1145.378715572445,
+   "n_iter": 19,
+   "converged": true,
+   "trace": [
+    -1420.7974881996402,
+    -1330.513048500148,
+    -1272.3656747347381,
+    -1213.183554913324,
+    -1181.5909060274757,
+    -1177.5895411135907,
+    -1175.4704515357078,
+    -1173.2594385351838,
+    -1169.9682699242724,
+    -1164.4610728398975,
+    -1157.4774480141873,
+    -1152.4263449226046,
+    -1149.2829091796425,
+    -1147.0055772447124,
+    -1145.8231239146317,
+    -1145.4591327644787,
+    -1145.3899024163711,
+    -1145.3801118895985,
+    -1145.3788738079795,
+    -1145.378715572445
+   ],
+   "all_log_likelihoods": [
+    -1145.3790098721784,
+    -1145.3790635032394,
+    -1204.4030006717767,
+    -1145.3788142589553,
+    -1145.3793457385127,
+    -1145.378734806227,
+    -1145.378715572445,
+    -1145.3787972598193,
+    -1145.3787959330566,
+    -1145.3787271804163
+   ]
+  },
+  "error": null,
+  "warnings": [],
+  "matching": [
+   1,
+   0,
+   2
+  ],
+  "errors_vs_truth": {
+   "pi_abs": [
+    0.014774034084334753,
+    0.004659419838093204,
+    0.010114614246241493
+   ],
+   "mu_dist": [
+    0.03169971842484336,
+    0.060986633380615954,
+    0.10596130666989342
+   ],
+   "Sigma_fro": [
+    0.25390679424498935,
+    0.3733121269375231,
+    0.34840982565653794
+   ]
+  },
+  "ari_vs_true_labels": 0.9773502063903861,
+  "bic": [
+   {
+    "K": 1,
+    "bic": 2796.7709701630806,
+    "log_likelihood": -1384.1260288948997,
+    "n_iter": 2,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 2,
+    "bic": 2501.2140291806554,
+    "log_likelihood": -1219.2362109797186,
+    "n_iter": 13,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 3,
+    "bic": 2387.7217332140453,
+    "log_likelihood": -1145.378715572445,
+    "n_iter": 19,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 4,
+    "bic": 2396.2927055617565,
+    "log_likelihood": -1132.552854322332,
+    "n_iter": 67,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 5,
+    "bic": 2426.649957372077,
+    "log_likelihood": -1130.6201328035236,
+    "n_iter": 98,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 6,
+    "bic": 2452.7674878296057,
+    "log_likelihood": -1126.5675506083194,
+    "n_iter": 114,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   }
+  ],
+  "bic_selected_k": 3
+ },
+ "q2_initialization": [
+  {
+   "dataset": "synthetic",
+   "K": 3,
+   "runs": [
+    {
+     "seed": 0,
+     "log_likelihood": -1145.3790098721784,
+     "n_iter": 10,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 1,
+     "log_likelihood": -1145.3788068314034,
+     "n_iter": 20,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 2,
+     "log_likelihood": -1145.3787727778426,
+     "n_iter": 23,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 3,
+     "log_likelihood": -1145.3787422212845,
+     "n_iter": 28,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 4,
+     "log_likelihood": -1145.3790082901337,
+     "n_iter": 27,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 5,
+     "log_likelihood": -1145.3791985327966,
+     "n_iter": 21,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 6,
+     "log_likelihood": -1145.378925339371,
+     "n_iter": 14,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 7,
+     "log_likelihood": -1145.3794417301788,
+     "n_iter": 27,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 8,
+     "log_likelihood": -1145.3788337888,
+     "n_iter": 19,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 9,
+     "log_likelihood": -1145.3787513151292,
+     "n_iter": 20,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 10,
+     "log_likelihood": -1145.3788207123737,
+     "n_iter": 26,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 11,
+     "log_likelihood": -1145.378732653969,
+     "n_iter": 23,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 12,
+     "log_likelihood": -1145.3787331480646,
+     "n_iter": 21,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 13,
+     "log_likelihood": -1145.3791344870415,
+     "n_iter": 29,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 14,
+     "log_likelihood": -1145.3791748424449,
+     "n_iter": 16,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 15,
+     "log_likelihood": -1145.3789011185927,
+     "n_iter": 42,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 16,
+     "log_likelihood": -1145.3791298814044,
+     "n_iter": 29,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 17,
+     "log_likelihood": -1145.3787555936933,
+     "n_iter": 52,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 18,
+     "log_likelihood": -1145.378829763626,
+     "n_iter": 17,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 19,
+     "log_likelihood": -1145.3792684267507,
+     "n_iter": 32,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    }
+   ],
+   "best": -1145.378732653969,
+   "worst": -1145.3794417301788,
+   "n_distinct_optima": 1,
+   "n_reaching_best": 20
+  },
+  {
+   "dataset": "synthetic",
+   "K": 5,
+   "runs": [
+    {
+     "seed": 0,
+     "log_likelihood": -1130.7710738292176,
+     "n_iter": 156,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 1,
+     "log_likelihood": -1134.7867560629443,
+     "n_iter": 157,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 2,
+     "log_likelihood": -1131.0747090570849,
+     "n_iter": 157,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 3,
+     "log_likelihood": -1130.7701861996816,
+     "n_iter": 128,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 4,
+     "log_likelihood": -1130.7293076412598,
+     "n_iter": 101,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 5,
+     "log_likelihood": -1133.483355814717,
+     "n_iter": 105,
+     "converged": true,
+     "error": null,
+     "warnings": [
+      "Có thành phần gần rỗng (N_k < 1): [  0.654   53.0225  11.5776 146.8697  87.8762]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.6561  52.8015  11.9773 146.6672  87.8979]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.6702  53.2147  11.2631 147.0057  87.8464]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.6775  52.5548  12.4512 146.4043  87.9123]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.7011  53.3733  11.052  147.0646  87.8089]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.7169  52.2835  12.9953 146.0828  87.9215]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.7432  53.492   10.9639 147.0363  87.7646]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.7736  51.9862  13.6108 145.7013  87.9281]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.7941  53.5688  11.0005 146.9222  87.7143]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.8479  51.659   14.3026 145.2558  87.9347]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.8532  53.6108  11.1323 146.745   87.6587]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.9206  53.6286  11.3135 146.5386  87.5987]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.9422  51.2957  15.0814 144.7365  87.9442]",
+      "Có thành phần gần rỗng (N_k < 1): [  0.9975  53.6305  11.5068 146.3299  87.5353]"
+     ]
+    },
+    {
+     "seed": 6,
+     "log_likelihood": -1133.8181544783506,
+     "n_iter": 305,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 7,
+     "log_likelihood": -1127.1697155398465,
+     "n_iter": 80,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 8,
+     "log_likelihood": -1130.7703442371703,
+     "n_iter": 95,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 9,
+     "log_likelihood": -1131.5740131476928,
+     "n_iter": 139,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 10,
+     "log_likelihood": -1132.0324064928936,
+     "n_iter": 119,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 11,
+     "log_likelihood": -1136.307713373292,
+     "n_iter": 110,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 12,
+     "log_likelihood": -1130.771001282381,
+     "n_iter": 85,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 13,
+     "log_likelihood": -1132.0326800606804,
+     "n_iter": 113,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 14,
+     "log_likelihood": -1136.4586513225909,
+     "n_iter": 142,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 15,
+     "log_likelihood": -1133.562735359977,
+     "n_iter": 202,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 16,
+     "log_likelihood": -1130.7703774459071,
+     "n_iter": 124,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 17,
+     "log_likelihood": -1133.8187515835375,
+     "n_iter": 112,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 18,
+     "log_likelihood": -1133.8182464225722,
+     "n_iter": 189,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 19,
+     "log_likelihood": -1129.1283291642376,
+     "n_iter": 60,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    }
+   ],
+   "best": -1127.1697155398465,
+   "worst": -1136.4586513225909,
+   "n_distinct_optima": 13,
+   "n_reaching_best": 1
+  },
+  {
+   "dataset": "faithful",
+   "K": 2,
+   "runs": [
+    {
+     "seed": 0,
+     "log_likelihood": -385.4607004386569,
+     "n_iter": 21,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 1,
+     "log_likelihood": -385.46070207495563,
+     "n_iter": 13,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 2,
+     "log_likelihood": -385.46069956603543,
+     "n_iter": 9,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 3,
+     "log_likelihood": -385.46071130647897,
+     "n_iter": 16,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 4,
+     "log_likelihood": -385.4606976533099,
+     "n_iter": 42,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 5,
+     "log_likelihood": -385.4607067255685,
+     "n_iter": 12,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 6,
+     "log_likelihood": -385.46069724056275,
+     "n_iter": 10,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 7,
+     "log_likelihood": -385.4607076157033,
+     "n_iter": 8,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 8,
+     "log_likelihood": -385.46070791849405,
+     "n_iter": 10,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 9,
+     "log_likelihood": -385.4607014203803,
+     "n_iter": 39,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 10,
+     "log_likelihood": -385.4607146991198,
+     "n_iter": 19,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 11,
+     "log_likelihood": -385.4606977196487,
+     "n_iter": 8,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 12,
+     "log_likelihood": -385.4606995808372,
+     "n_iter": 75,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 13,
+     "log_likelihood": -385.4607124784273,
+     "n_iter": 9,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 14,
+     "log_likelihood": -385.460706766617,
+     "n_iter": 23,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 15,
+     "log_likelihood": -385.46070471796145,
+     "n_iter": 15,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 16,
+     "log_likelihood": -385.4607057519952,
+     "n_iter": 11,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 17,
+     "log_likelihood": -385.4607033204883,
+     "n_iter": 12,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 18,
+     "log_likelihood": -385.4606977485986,
+     "n_iter": 38,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 19,
+     "log_likelihood": -385.4607003284767,
+     "n_iter": 12,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    }
+   ],
+   "best": -385.46069724056275,
+   "worst": -385.4607146991198,
+   "n_distinct_optima": 1,
+   "n_reaching_best": 20
+  },
+  {
+   "dataset": "faithful",
+   "K": 4,
+   "runs": [
+    {
+     "seed": 0,
+     "log_likelihood": -371.24817988748,
+     "n_iter": 149,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 1,
+     "log_likelihood": -361.22991373071613,
+     "n_iter": 85,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 2,
+     "log_likelihood": -368.0210471883053,
+     "n_iter": 102,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 3,
+     "log_likelihood": -369.08712530500736,
+     "n_iter": 74,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 4,
+     "log_likelihood": -369.00931539993223,
+     "n_iter": 250,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 5,
+     "log_likelihood": -369.9016156443078,
+     "n_iter": 96,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 6,
+     "log_likelihood": -369.903948388077,
+     "n_iter": 268,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 7,
+     "log_likelihood": -369.9037976343833,
+     "n_iter": 328,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 8,
+     "log_likelihood": -361.23285087823365,
+     "n_iter": 172,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 9,
+     "log_likelihood": -369.9037670139925,
+     "n_iter": 134,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 10,
+     "log_likelihood": -361.9022290435663,
+     "n_iter": 166,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 11,
+     "log_likelihood": -371.23730587000466,
+     "n_iter": 109,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 12,
+     "log_likelihood": -369.9038115938205,
+     "n_iter": 201,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 13,
+     "log_likelihood": -368.007308783992,
+     "n_iter": 50,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 14,
+     "log_likelihood": -368.31602011695804,
+     "n_iter": 124,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 15,
+     "log_likelihood": -367.3495706705441,
+     "n_iter": 169,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 16,
+     "log_likelihood": -368.0207037867277,
+     "n_iter": 65,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 17,
+     "log_likelihood": -369.0093101187068,
+     "n_iter": 252,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 18,
+     "log_likelihood": -371.23747224495474,
+     "n_iter": 87,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    },
+    {
+     "seed": 19,
+     "log_likelihood": -369.904066392152,
+     "n_iter": 178,
+     "converged": true,
+     "error": null,
+     "warnings": []
+    }
+   ],
+   "best": -361.22991373071613,
+   "worst": -371.24817988748,
+   "n_distinct_optima": 11,
+   "n_reaching_best": 2
+  }
+ ],
+ "q3_faithful": {
+  "data": {
+   "name": "faithful",
+   "n": 272,
+   "features": [
+    "eruptions",
+    "waiting"
+   ],
+   "sha256": "5043db1e2c51c8e8fd67e0868c768ae589770cc76ad0ac0c5b7afd1fca31fc57",
+   "preprocessing": "z-score",
+   "mean": [
+    3.4877830882352936,
+    70.8970588235294
+   ],
+   "std": [
+    1.1392712102257678,
+    13.569960017586368
+   ]
+  },
+  "bic": [
+   {
+    "K": 1,
+    "bic": 1118.0159713406442,
+    "log_likelihood": -544.9934805045821,
+    "n_iter": 2,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 2,
+    "bic": 832.585217680359,
+    "log_likelihood": -385.4606974755515,
+    "n_iter": 25,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 3,
+    "bic": 844.124135987999,
+    "log_likelihood": -374.4127504304835,
+    "n_iter": 85,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 4,
+    "bic": 851.3889964890641,
+    "log_likelihood": -361.2277744821281,
+    "n_iter": 107,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 5,
+    "bic": 877.1639975266634,
+    "log_likelihood": -357.2978688020397,
+    "n_iter": 219,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   },
+   {
+    "K": 6,
+    "bic": 897.715252847772,
+    "log_likelihood": -350.756090263706,
+    "n_iter": 183,
+    "converged": true,
+    "error": null,
+    "warnings": []
+   }
+  ],
+  "bic_selected_k": 2,
+  "fit_standardized": {
+   "pi": [
+    0.6441200856601917,
+    0.35587991433980837
+   ],
+   "mu": [
+    [
+     0.703865833492225,
+     0.6684795017540172
+    ],
+    [
+     -1.2739525404330472,
+     -1.2099055231331308
+    ]
+   ],
+   "Sigma": [
+    [
+     [
+      0.13093871396013024,
+      0.06082614897814117
+     ],
+     [
+      0.06082614897814116,
+      0.19573632971244426
+     ]
+    ],
+    [
+     [
+      0.053301905732758954,
+      0.02815743215875507
+     ],
+     [
+      0.028157432158755075,
+      0.18300065454988354
+     ]
+    ]
+   ],
+   "log_likelihood": -385.4606974755515,
+   "n_iter": 25,
+   "converged": true,
+   "trace": [
+    -654.7542792836236,
+    -542.4282322076622,
+    -542.1633195086597,
+    -541.8768215230632,
+    -541.532607719992,
+    -541.0838964999856,
+    -540.4330948213623,
+    -539.3556704994345,
+    -537.2679332914645,
+    -532.3912758961154,
+    -519.2095229147764,
+    -495.7901391983536,
+    -480.3294111495611,
+    -467.9179832347623,
+    -457.87846535344886,
+    -449.63813239688733,
+    -440.89382970945263,
+    -429.1859978689022,
+    -414.4367653000477,
+    -400.98775091813866,
+    -390.1379459117203,
+    -385.7409327002607,
+    -385.470789900632,
+    -385.4612266495311,
+    -385.46072605996204,
+    -385.4606974755515
+   ],
+   "all_log_likelihoods": [
+    -385.4607004386569,
+    -385.460698099771,
+    -385.4606976713244,
+    -385.46069763981507,
+    -385.460705689431,
+    -385.46070695786887,
+    -385.4606974755515,
+    -385.4607143543899,
+    -385.46069920440095,
+    -385.46070275646946
+   ]
+  },
+  "error": null,
+  "warnings": [],
+  "params_minutes": {
+   "pi": [
+    0.6441200856601917,
+    0.35587991433980837
+   ],
+   "mu": [
+    [
+     4.289677168194549,
+     79.96829893490748
+    ],
+    [
+     2.0364056357259446,
+     54.4786892495559
+    ]
+   ],
+   "Sigma": [
+    [
+     [
+      0.16995044911426782,
+      0.9403640378006021
+     ],
+     [
+      0.940364037800602,
+      36.04363446364222
+     ]
+    ],
+    [
+     [
+      0.06918261638560957,
+      0.435310093499735
+     ],
+     [
+      0.43531009349973504,
+      33.69843865414993
+     ]
+    ]
+   ],
+   "corr_within_component": [
+    0.37994485288160934,
+    0.2850987783952543
+   ]
+  }
+ }
+}
