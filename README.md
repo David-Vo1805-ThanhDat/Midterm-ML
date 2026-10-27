@@ -93,7 +93,7 @@ Saved to <thư mục repo>/results
 
 ### Kết quả thực nghiệm (`results/`)
 
-Các file kết quả đã được commit sẵn. Chạy lại sẽ ghi đè chúng; với `requirements-lock.txt` thì nội dung chỉ khác thời điểm chạy (`generated_at`) và thông tin môi trường (`environment`). Để tự kiểm tra: chạy lại rồi dùng `git diff results/`.
+Các file kết quả đã được commit sẵn. Chạy lại sẽ ghi đè chúng; với `requirements-lock.txt` thì nội dung chỉ khác thời điểm chạy (`generated_at`) và thông tin môi trường (`environment`). Để tự kiểm tra: chạy lại rồi dùng `git diff results/`. `git status` vẫn báo các file PNG thay đổi vì matplotlib ghi metadata vào file, nhưng nội dung hình giống hệt từng pixel.
 
 | File | Nội dung |
 |---|---|
