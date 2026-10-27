@@ -53,6 +53,19 @@ Mọi lệnh bên dưới chạy từ **thư mục gốc của repo**. Code khô
 | `init-study.csv` | Log-likelihood cuối của 20 seed khởi tạo (câu hỏi Q2) |
 | `synthetic-labels.csv`, `faithful-labels.csv` | Từng điểm dữ liệu kèm nhãn dự đoán và responsibility |
 
+**Hình** (`python -m src.make_figures`, vẽ từ các file kết quả trên, không fit lại):
+
+| File trong `results/figures/` | Nội dung |
+|---|---|
+| `fig1_data_before.png` | Hai bộ dữ liệu trước khi phân cụm |
+| `fig2_synthetic_clusters.png` | Cụm dự đoán trên dữ liệu tổng hợp; Gaussian học được so với Gaussian thật |
+| `fig3_faithful_clusters.png` | Cụm trên Old Faithful (đơn vị phút), khoanh các điểm không chắc chắn |
+| `fig4_loglikelihood.png` | Log-likelihood theo vòng lặp |
+| `fig5_bic.png` | BIC theo K cho hai bộ dữ liệu |
+| `fig6_init_study.png` | Log-likelihood cuối theo seed khởi tạo (local optimum) |
+
+Số thứ tự cụm do EM đặt tùy ý (label switching): “cụm 1” không có nghĩa đặc biệt gì.
+
 ## 4. Dữ liệu
 
 | Bộ | Nguồn | Vai trò |
