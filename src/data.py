@@ -6,7 +6,8 @@ Hai nguồn dữ liệu:
 
 Nhãn thật của dữ liệu tổng hợp CHỈ dùng để đánh giá, không đưa vào huấn luyện.
 
-Chạy thử:  python -m src.data
+Chạy thử:  python -m src.data              (in thống kê hai bộ dữ liệu)
+Tải lại:   python -m src.data --download   (tải faithful.csv và kiểm tra SHA-256)
 """
 
 from __future__ import annotations
@@ -101,6 +102,11 @@ def _summary(name: str, X: np.ndarray) -> None:
 
 
 if __name__ == "__main__":
+    import sys
+
+    if "--download" in sys.argv:
+        print(f"Downloaded and verified: {download_faithful()}")
+
     X_syn, z_syn = make_synthetic()
     _summary("Synthetic 2D", X_syn)
     print(f"  points per component: {np.bincount(z_syn)}")
