@@ -164,7 +164,7 @@ def fig_bic(res):
         ax.plot(best, b[K.index(best)], marker="o", ms=11, color=COLORS[1], mec="white")
         ax.set(xlabel="Số thành phần K", ylabel="BIC (nhỏ hơn là tốt hơn)", xticks=K)
         ax.set_title(f"{title}\nBIC nhỏ nhất ở K = {best}", loc="left")
-    _footer(fig, f"Mỗi K: n_init = {res['config']['n_init']}, seed EM = {res['config']['em_seed']}"
+    _footer(fig, f"Mỗi K: n_init = {res['config']['n_init_bic']}, seed EM = {res['config']['em_seed']}"
             "  ·  BIC = −2ℓ + p·ln N, p = (K−1) + KD + KD(D+1)/2  ·  Không dùng nhãn thật để chọn K")
     _save(fig, "fig5_bic.png")
 

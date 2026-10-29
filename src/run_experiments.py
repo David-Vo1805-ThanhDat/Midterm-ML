@@ -2,7 +2,7 @@
 
     python -m src.run_experiments
 
-Trả lời ba câu hỏi ở docs/data-and-use-case.md mục 4:
+Trả lời ba câu hỏi ở docs/data-and-use-case.md mục 5:
     Q1. EM tự cài đặt có học đúng không?            (dữ liệu tổng hợp, so với tham số thật)
     Q2. Kết quả có phụ thuộc khởi tạo không?        (nhiều seed, mỗi seed một lần khởi tạo)
     Q3. Old Faithful có tách thành các "kiểu" không? (chọn K bằng BIC)
@@ -66,7 +66,7 @@ def _match_to_truth(mu):
 def _bic_sweep(X):
     rows = []
     for K in config.K_RANGE:
-        result, error, warns = _fit(X, K)
+        result, error, warns = _fit(X, K, n_init=config.N_INIT_BIC)
         rows.append({"K": K, "bic": None if result is None else bic(result, X),
                      "log_likelihood": None if result is None else result.log_likelihood,
                      "n_iter": None if result is None else result.n_iter,
