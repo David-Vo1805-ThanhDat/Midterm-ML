@@ -24,6 +24,9 @@ REG_COVAR = 1e-6           # cộng vào đường chéo covariance
 
 # Chọn K bằng BIC
 K_RANGE = list(range(1, 7))
+# K lớn dễ kẹt ở local optimum: với 10 khởi tạo, Old Faithful K = 3 dừng ở ℓ = -374.41
+# thay vì -369.64. 100 khởi tạo tìm được nghiệm tốt nhất cho mọi K <= 4 trên cả hai bộ dữ liệu.
+N_INIT_BIC = 100
 
 # Câu hỏi Q2 (phụ thuộc khởi tạo): chạy riêng từng seed, mỗi seed một lần khởi tạo.
 # Khảo sát cả K đúng/được BIC chọn và K lớn hơn (nơi local optimum xuất hiện).
@@ -37,6 +40,6 @@ def as_dict() -> dict:
         "synthetic_seed": SYNTHETIC_SEED, "synthetic_n": SYNTHETIC_N,
         "synthetic_true_k": SYNTHETIC_TRUE_K, "em_seed": EM_SEED, "n_init": N_INIT,
         "max_iter": MAX_ITER, "tol": TOL, "reg_covar": REG_COVAR,
-        "k_range": K_RANGE, "init_study_seeds": INIT_STUDY_SEEDS,
+        "k_range": K_RANGE, "n_init_bic": N_INIT_BIC, "init_study_seeds": INIT_STUDY_SEEDS,
         "init_study_k": INIT_STUDY_K,
     }

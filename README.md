@@ -14,7 +14,7 @@ Từ thư mục gốc của repo, sau khi cài đặt (mục 2):
 
 ```bash
 pytest                           # kiểm thử: tất cả phải pass
-python -m src.run_experiments    # chạy thực nghiệm, ghi vào results/ (khoảng 10 giây)
+python -m src.run_experiments    # chạy thực nghiệm, ghi vào results/ (khoảng 1 phút)
 python -m src.make_figures       # vẽ 6 hình vào results/figures/
 ```
 
@@ -75,7 +75,7 @@ Mọi lệnh bên dưới chạy từ **thư mục gốc của repo** (thư mụ
 | Kiểm tra dữ liệu | `python -m src.data` | Synthetic `(300, 2)` với `[155 88 57]` điểm mỗi thành phần; Old Faithful `(272, 2)` |
 | Tải lại Old Faithful (không bắt buộc, cần mạng) | `python -m src.data --download` | Tải từ Rdatasets và kiểm tra SHA-256 |
 | Chạy toàn bộ test | `pytest` | `41 passed` |
-| Chạy toàn bộ thực nghiệm | `python -m src.run_experiments` | Khoảng 10 giây; in tóm tắt bên dưới và ghi file vào `results/` |
+| Chạy toàn bộ thực nghiệm | `python -m src.run_experiments` | Khoảng 1 phút; in tóm tắt bên dưới và ghi file vào `results/` |
 | Vẽ hình | `python -m src.make_figures` | 6 file PNG trong `results/figures/` |
 
 Output mong đợi của `python -m src.run_experiments`:
@@ -134,7 +134,8 @@ Mọi tham số cố định nằm trong `src/config.py`. Muốn thử giá tr�
 |---|---|---|
 | `SYNTHETIC_SEED` | 42 | Seed sinh dữ liệu tổng hợp |
 | `EM_SEED` | 0 | Seed khởi tạo EM |
-| `N_INIT` | 10 | Số lần khởi tạo; giữ lần có log-likelihood cao nhất |
+| `N_INIT` | 10 | Số lần khởi tạo cho phép chạy chính (Q1, Q3); giữ lần có log-likelihood cao nhất |
+| `N_INIT_BIC` | 100 | Số lần khởi tạo cho mỗi K khi chọn K bằng BIC; K lớn dễ kẹt ở local optimum nên cần nhiều hơn |
 | `MAX_ITER` | 500 | Số vòng lặp tối đa |
 | `TOL` | 1e-6 | Dừng khi \|Δℓ\| / (1 + \|ℓ\|) < TOL |
 | `REG_COVAR` | 1e-6 | Cộng vào đường chéo covariance để tránh suy biến |

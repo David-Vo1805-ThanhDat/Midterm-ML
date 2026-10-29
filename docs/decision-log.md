@@ -16,6 +16,7 @@
 | D-08 | Võ Thành Đạt phụ trách code EM; Nguyễn Văn Tâm phụ trách ví dụ tính tay; Nguyễn Hoàng Minh phụ trách slide. | TV3 cung cấp | Đã xác nhận |
 | D-09 | Cả nhóm đã đồng ý phạm vi MVP EM/GMM. | TV3 xác nhận | Đã xác nhận trong trao đổi; approval/comment trên PR là bằng chứng review cuối |
 | D-10 | Checkpoint tiếp theo vào tối thứ Ba 27/10/2026; 20:00 là giờ đề xuất. | TV3 cung cấp | Đã chốt ngày/buổi; chưa chốt giờ cụ thể |
+| D-11 | Bước chọn K bằng BIC dùng 100 khởi tạo cho mỗi K (`N_INIT_BIC`); phép chạy chính giữ 10. Với 10 khởi tạo, Old Faithful K = 3 kẹt ở ℓ = −374.413 (BIC 844.124) thay vì −369.637 (BIC 834.573), làm khoảng cách K = 2 so với K = 3 bị phóng đại từ 1.988 lên 11.539 và lệch với kiểm chứng 30 seed ở I13. Kết luận K = 2 (Old Faithful) và K = 3 (tổng hợp) không đổi. | Chạy lại `src/run_experiments.py` ngày 29/10/2026 | Đã áp dụng; `results/bic.csv` và Hình 5 cập nhật |
 
 ## Câu hỏi còn mở
 
